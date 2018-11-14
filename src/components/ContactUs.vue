@@ -1,15 +1,15 @@
 <template>
   <div class="hero">
-    <h3 class="vue-title"><i class="fa fa-user" style="padding: 3px"></i>{{messagetitle}}</h3>
+    <h3 class="vue-title"><i class="fa fa-comment" style="padding: 3px"></i>{{messagetitle}}</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Operator',
+  name: 'ContactUs',
   data () {
     return {
-      messagetitle: ' Operator '
+      messagetitle: ' Contact Us '
     }
   }
 }
