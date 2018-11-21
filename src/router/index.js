@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/Home'
+import Home from '@/components/Home'
 import Operators from '@/components/Operators'
 import Operator from '@/components/Operator'
 import Maps from '@/components/Maps'
@@ -14,7 +14,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: HelloWorld
+      component: Home
     },
     {
       path: '/operators',
