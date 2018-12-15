@@ -19,8 +19,8 @@
               </select>
             </div>
             <div class="form-group">
-              <label class="form-control-label" name="side">Enter the Force the operator is from</label>
-              <input class="form__input" type="text" v-model.trim="side"/>
+              <label class="form-control-label" name="force">Enter the Force the operator is from</label>
+              <input class="form__input" type="text" v-model.trim="force"/>
             </div>
             <div class="form-group">
               <label class="form__label" name="gadget">What is the operators gadget</label>

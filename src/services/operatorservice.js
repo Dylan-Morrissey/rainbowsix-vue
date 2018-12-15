@@ -5,7 +5,7 @@ export default {
     return Api().get('/operators')
   },
   postOperator (operator) {
-    return Api().post('/operator', operator,
+    return Api().post('/operators', operator,
       {headers: {'Content-type': 'application/json'}})
   }
 }
