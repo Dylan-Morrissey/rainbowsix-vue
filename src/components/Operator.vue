@@ -19,12 +19,12 @@
               </select>
             </div>
             <div class="form-group">
-              <label class="form__label">Enter the Force the operator is from</label>
-              <input class="form__input"/>
+              <label class="form-control-label" name="side">Enter the Force the operator is from</label>
+              <input class="form__input" type="text" v-model.trim="side"/>
             </div>
             <div class="form-group">
-              <label class="form__label">What is the operators gadget</label>
-              <input class="form__input"/>
+              <label class="form__label" name="gadget">What is the operators gadget</label>
+              <input class="form__input" type="text" v-model.trim="gadget"/>
             </div>
             <p>
               <button class="btn btn-primary btn1" type="submit" :disabled="submitStatus === 'PENDING'">Add Operator</button>
@@ -45,7 +45,7 @@ import VueForm from 'vueform'
 import Vuelidate from 'vuelidate'
 import VueSweetAlert from 'vue-sweetalert'
 import OperatorService from '@/services/operatorservice'
-import { required, minLength, between } from 'vuelidate/lib/validators'
+import { required, minLength } from 'vuelidate/lib/validators'
 
 Vue.use(VueForm, {
   inputClasses: {
@@ -61,24 +61,24 @@ export default {
   name: 'Operator',
   data () {
     return {
-      messagetitle: ' Operator ',
+      messagetitle: ' Add New Operator',
       name: '',
       side: 'Defender',
       force: '',
       gadget: '',
       likes: 0,
-      operator: { name: '', side: '', force: '', gadget: '', likes: 0 },
+      operator: {},
       submitStatus: null
     }
   },
   validations: {
-    gadget: {
-      required,
-      minLength: minLength(5)
-    },
     name: {
       required,
-      between: between(3, 1000)
+      minLength: minLength(3)
+    },
+    gadget: {
+      required,
+      minLength: minLength(2)
     }
   },
   methods: {
@@ -102,7 +102,7 @@ export default {
           this.operator = operator
           console.log('Submitting in new Operator request : ' + [this.operator, null, 5])
           this.submitOperator(this.operator)
-        }, 500)
+        }, 60)
       }
     },
     submitOperator: function (operator) {
