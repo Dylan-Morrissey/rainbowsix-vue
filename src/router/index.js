@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Operators from '@/components/Operators'
 import Operator from '@/components/Operator'
+import Edit from '@/components/Edit'
 import Maps from '@/components/Maps'
 import AboutUs from '@/components/AboutUs'
 import ContactUs from '@/components/ContactUs'
@@ -25,6 +26,12 @@ export default new Router({
       path: '/operator',
       name: 'Operator',
       component: Operator
+    },
+    {
+      path: '/edit',
+      name: 'Edit',
+      component: Edit,
+      props: true
     },
     {
       path: '/maps',
