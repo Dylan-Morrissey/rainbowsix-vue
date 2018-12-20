@@ -18,7 +18,6 @@
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
         <b-nav-item to="/about"><i class="fa fa-info" style="padding: 5px"> About Us</i></b-nav-item>
-        <b-nav-item to="/contact"><i class="fa fa-comment" style="padding: 5px"> Contact Us</i></b-nav-item>
         <b-nav-item to="/signup"><i class="fa fa-sign-up" style="padding: 5px"> Sign Up </i></b-nav-item>
           <b-nav-item to="/signin"><i class="fa fa-sign-in" style="padding: 5px"> Sign In </i></b-nav-item>
         <b-nav-item><i class="fa fa-sign-out" style="padding: 5px"> Logout </i></b-nav-item>
