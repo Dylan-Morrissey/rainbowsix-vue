@@ -7,17 +7,13 @@
         <td>
           <p class="lead"><b><i>Welcome to the rainbow 6 siege web app</i></b>
           <p>Now you can create your own operators for the game.</p>
-          <p>Just click <a href ="/operator">here</a> to go to</p>
-          <p>the operators page and create your ideal operator</p>
-        </td>
-        <td>
-          <img src="../assets/jager.jpg" alt="description here" />
+          <p>Just click <a href ="/operators#/operators">here</a> to go to the operators page and view all operator</p>
         </td>
       </tr>
+      <p class="lead"><b><i>Intresed in learning more about the Game?</i></b>
+        <p>Watch the youtube video attached to see a review and learn what the game has to offer</p>
+      <iframe width="700" height="500" src="https://www.youtube.com/embed/Pt6v2cCjdG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </table>
-
-    <p></p>
-    <p class="lead">This is the homepage of your <b>MEVN</b> Web app</p>
   </div>
 </template>
 

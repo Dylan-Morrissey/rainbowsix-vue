@@ -19,19 +19,47 @@
         <b-navbar-nav class="ml-auto">
         <b-nav-item to="/about"><i class="fa fa-info" style="padding: 5px"> About Us</i></b-nav-item>
         <b-nav-item to="/contact"><i class="fa fa-comment" style="padding: 5px"> Contact Us</i></b-nav-item>
-        <b-nav-item to="/login"><i class="fa fa-sign-in" style="padding: 5px"> Login </i></b-nav-item>
-        <b-nav-item to="/logout"><i class="fa fa-sign-out" style="padding: 5px"> Logout </i></b-nav-item>
+        <b-nav-item to="/signup"><i class="fa fa-sign-up" style="padding: 5px"> Sign Up </i></b-nav-item>
+          <b-nav-item to="/signin"><i class="fa fa-sign-in" style="padding: 5px"> Sign In </i></b-nav-item>
+        <b-nav-item><i class="fa fa-sign-out" style="padding: 5px"> Logout </i></b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
     <router-view/>
+    <v-footer dark
+              height="auto"
+    >
+      <v-card
+        flat
+        tile
+        class="indigo lighten-1 white--text text-xs-center"
+      >
+        <v-card-text>
+          <v-btn
+            v-for="icon in icons"
+            :key="icon"
+            class="mx-3 white--text"
+            icon
+          >
+            <v-icon size="24px">{{ icon }}</v-icon>
+          </v-btn>
+        </v-card-text>
+
+        <v-card-text class="black--text pt-0">
+          Rainbow 6 Siege Web Application created by Dylan Morrissey using Vue.js and deployed to Firebase
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-text class="black--text">
+          &copy;2018 — <strong>Vuetify</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
   </div>
 </template>
-
 <script>
-export default {
-  name: 'App'
-}
+
 </script>
 
 <style>

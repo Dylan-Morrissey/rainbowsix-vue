@@ -43,6 +43,7 @@ import Vue from 'vue'
 import VueForm from 'vueform'
 import Vuelidate from 'vuelidate'
 import { required, minLength } from 'vuelidate/lib/validators'
+import * as firebase from 'firebase'
 
 Vue.use(VueForm, {
   inputClasses: {
@@ -78,25 +79,34 @@ export default {
   },
   methods: {
     submit () {
-      console.log('submit!')
-      this.$v.$touch()
-      if (this.$v.$invalid) {
-        this.submitStatus = 'ERROR'
+      var user = firebase.auth().currentUser
+      if (user) {
+        console.log('submit!')
+        this.$v.$touch()
+        if (this.$v.$invalid) {
+          this.submitStatus = 'ERROR'
+        } else {
+          this.submitStatus = 'PENDING'
+          setTimeout(() => {
+            this.submitStatus = 'OK'
+            var operator = {
+              name: this.name,
+              side: this.side,
+              likes: this.likes,
+              force: this.force,
+              gadget: this.gadget
+            }
+            this.operator = operator
+            console.log('Submitting in new Operator request : ' + [this.operator, null, 5])
+            this.$emit('operator-is-created-updated', this.operator)
+          }, 60)
+        }
       } else {
-        this.submitStatus = 'PENDING'
-        setTimeout(() => {
-          this.submitStatus = 'OK'
-          var operator = {
-            name: this.name,
-            side: this.side,
-            likes: this.likes,
-            force: this.force,
-            gadget: this.gadget
-          }
-          this.operator = operator
-          console.log('Submitting in new Operator request : ' + [this.operator, null, 5])
-          this.$emit('operator-is-created-updated', this.operator)
-        }, 60)
+        this.$swal({
+          title: 'Please Sign up to preform this action?',
+          type: 'warning',
+          showCloseButton: true
+        })
       }
     }
   }

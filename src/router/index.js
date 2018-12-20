@@ -9,6 +9,8 @@ import Map from '@/components/Map'
 import EditMap from '@/components/EditMap'
 import AboutUs from '@/components/AboutUs'
 import ContactUs from '@/components/ContactUs'
+import SignUp from '@/components/SignUp'
+import SignIn from '@/components/SignIn'
 
 Vue.use(Router)
 
@@ -60,6 +62,17 @@ export default new Router({
       path: '/contact',
       name: 'ContactUs',
       component: ContactUs
+    },
+    {
+      path: '/signup',
+      name: 'SignUp',
+      component: SignUp
+    },
+    {
+      path: '/signin',
+      name: 'SignIn',
+      component: SignIn
     }
+
   ]
 })
