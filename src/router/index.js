@@ -5,6 +5,8 @@ import Operators from '@/components/Operators'
 import Operator from '@/components/Operator'
 import Edit from '@/components/Edit'
 import Maps from '@/components/Maps'
+import Map from '@/components/Map'
+import EditMap from '@/components/EditMap'
 import AboutUs from '@/components/AboutUs'
 import ContactUs from '@/components/ContactUs'
 
@@ -37,6 +39,17 @@ export default new Router({
       path: '/maps',
       name: 'Maps',
       component: Maps
+    },
+    {
+      path: '/map',
+      name: 'Map',
+      component: Map
+    },
+    {
+      path: '/editmap',
+      name: 'EditMap',
+      component: EditMap,
+      props: true
     },
     {
       path: '/about',

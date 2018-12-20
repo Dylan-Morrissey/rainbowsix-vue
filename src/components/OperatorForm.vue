@@ -1,6 +1,5 @@
 <template>
   <div id="appl" class="hero">
-    <h3 class="vue-title"><i class="fa fa-users" style="padding: 3px"></i>{{messagetitle}}</h3>
     <div class="container mt-3 mt-sm-5">
       <div class="row justify-content-center">
         <div class="col-md-6">
@@ -59,12 +58,11 @@ export default {
   props: ['operatorBtnTitle', 'operator'],
   data () {
     return {
-      messagetitle: ' Operator ',
       name: this.operator.name,
       side: this.operator.side,
       force: this.operator.force,
       gadget: this.operator.gadget,
-      likes: 0,
+      likes: this.operator.likes,
       submitStatus: null
     }
   },
@@ -85,7 +83,6 @@ export default {
       if (this.$v.$invalid) {
         this.submitStatus = 'ERROR'
       } else {
-        // do your submit logic here
         this.submitStatus = 'PENDING'
         setTimeout(() => {
           this.submitStatus = 'OK'

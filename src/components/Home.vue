@@ -41,4 +41,7 @@
     font-size: 70pt;
     margin-bottom: 10px;
   }
+  body{
+    background: url("../assets/background.jpg") repeat center top;;
+  }
 </style>

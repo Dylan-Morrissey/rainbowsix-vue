@@ -121,4 +121,7 @@ export default {
     font-size: 45pt;
     margin-bottom: 10px;
   }
+  body{
+    background: url("../assets/opsbackground.jpg");
+  }
 </style>
