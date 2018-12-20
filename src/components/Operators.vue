@@ -26,7 +26,7 @@ export default {
       operators: [],
       props: ['_id'],
       errors: [],
-      columns: ['_id', 'name', 'side', 'force', 'gadget', 'likes', 'like', 'edit', 'remove'],
+      columns: ['name', 'side', 'force', 'gadget', 'likes', 'like', 'edit', 'remove'],
       options: {
         perPage: 10,
         filterable: ['likes', 'name', 'force', 'gadget', 'side'],

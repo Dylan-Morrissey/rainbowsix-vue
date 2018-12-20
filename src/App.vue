@@ -7,9 +7,10 @@
           <b-nav-item to="/#"><i ><img src="./assets/rblogotp.jpeg" class="img-circle" style="padding: 5px"> </i></b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav>
-          <b-nav-item to="/operators"><i class="fa fa-users" style="padding: 5px"> Manage Operators</i></b-nav-item>
-          <b-nav-item to="/operator"><i class="fa fa-user" style="padding: 5px"> Manage an Operator</i></b-nav-item>
-          <b-nav-item to="/maps"><i class="fa fa-globe" aria-hidden="true" style="padding: 5px"> Manage Maps</i></b-nav-item>
+          <b-nav-item to="/operators"><i class="fa fa-users" style="padding: 5px"> View all Operators</i></b-nav-item>
+          <b-nav-item to="/operator"><i class="fa fa-user" style="padding: 5px"> Add an Operator</i></b-nav-item>
+          <b-nav-item to="/maps"><i class="fa fa-globe" aria-hidden="true" style="padding: 5px"> View all Maps</i></b-nav-item>
+          <b-nav-item to="/maps"><i class="fa fa-globe" aria-hidden="true" style="padding: 5px"> Add a Map</i></b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-item to="/about"><i class="fa fa-info" style="padding: 5px"> About Us</i></b-nav-item>
@@ -31,12 +32,15 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    background: url("./assets/background.jpg") no-repeat;
+  }
+  .VueTables__sortable {
+    cursor: pointer;
+  }
 </style>
